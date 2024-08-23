@@ -8,18 +8,19 @@
     <link href="./styles.css" rel="stylesheet">
     <title>Ember</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body style="margin:0;padding:0;background-color: black;">
-    <div style="z-index:0;top:0;position:sticky;display:flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;width:100vw;background:url(https://i.pinimg.com/originals/25/48/bf/2548bf6970f74d0d9594e17b72bc2037.gif);background-repeat: no-repeat;background-size: cover;">
-        <img src="./image.png" style="height:300px;width:auto"/>
+    <div id="section1" style="z-index:0;top:0;position:sticky;display:flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;width:100vw;background:url(https://i.pinimg.com/originals/25/48/bf/2548bf6970f74d0d9594e17b72bc2037.gif);background-repeat: no-repeat;background-size: cover;">
+        <img id="logo" src="./image.png" style="height:300px;width:auto"/>
         <div style="color: rgb(183, 171, 152);">
             <div>
-                <h1 style="font-size: 12rem;margin:0;padding: 0;font-weight:900;">E M B E R</h1>
+                <h1 id="name" style="font-size: 12rem;margin:0;padding: 0;font-weight:900;">E M B E R</h1>
             </div>
-            <p style="color:white;font-weight:300;text-align:center;font-size: 2rem;font-family: Avant Garde, sans-serif;margin:0;padding: 0;"><b>Fuel</b> Your <b>Fire</b>, Not Your <b>Fear</b></p>
+            <p id="tgline" style="color:white;font-weight:300;text-align:center;font-size: 2rem;font-family: Avant Garde, sans-serif;margin:0;padding: 0;"><b>Fuel</b> Your <b>Fire</b>, Not Your <b>Fear</b></p>
         </div>
     </div>
-    <div style="padding-top:20px;z-index:3;top:0;position:sticky;margin:0;font-family: Avant Garde, sans-serif;text-align: center;background-color: black;">
+    <div style="padding-top:20px;z-index:3;top:0;position:sticky;margin-top:150vh;font-family: Avant Garde, sans-serif;text-align: center;background-color: black;">
         <h1 style="color: white;">Meet Our Team</h1>
         <div style="display: flex;justify-content:space-around;width: 100vw;margin: 1px solid black;flex-wrap: wrap;">
             <div class="book" style="background:url(./gpt.jpeg);background-size: cover;">
@@ -85,6 +86,7 @@
 
     </footer>
     
+    <script src="scripts.js"></script>
     
 
 

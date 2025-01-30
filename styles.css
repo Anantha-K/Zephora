@@ -1,65 +1,153 @@
 .book {
-    border-radius: 15px;
-    width: 300px;
-    height: 400px;
-    position: relative;
+  border-radius: 15px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.book:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 122, 33, 0.2);
+}
+
+.cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 30px 20px;
+  color: white;
+  transform: translateY(70%);
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  height: 100%;
+}
+
+.book:hover .cover {
+  transform: translateY(0);
+}
+
+.cover p {
+  margin: 5px 0;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cover p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .book {
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+  }
+}
+
+
+#section1 {
     overflow: hidden;
-    margin: 20px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .book:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255, 122, 33, 0.2);
-  }
-  
-  .cover {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    padding: 30px 20px;
-    color: white;
-    transform: translateY(70%);
-    transition: transform 0.5s ease;
+    z-index: 0;
+    top: 0;
+    position: sticky;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
+    height: 100vh;
+    width: 100vw;
+    background: url(ezgif.com-video-to-gif-converter.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo {
+    height: 300px;
+    width: auto;
+    max-width: 90vw;
+}
+
+#name {
+    color: white;
+    font-size: 12rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
     text-align: center;
-    height: 100%;
-  }
-  
-  .book:hover .cover {
-    transform: translateY(0);
-  }
-  
-  .cover p {
-    margin: 5px 0;
-    opacity: 0.9;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .cover p:first-child {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  
-  @media (max-width: 768px) {
-    .book {
-      width: 250px;
-      height: 350px;
-      margin: 15px;
+    white-space: nowrap;
+}
+
+#tgline {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    #name {
+        font-size: 8rem;
     }
-  }
+    #logo {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #name {
+        font-size: 5rem;
+    }
+    #logo {
+        height: 200px;
+    }
+    #tgline {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #name {
+        font-size: 3rem;
+    }
+    #logo {
+        height: 150px;
+    }
+    #tgline {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #logo {
+        height: 120px;
+    }
+    #name {
+        font-size: 4rem;
+    }
+    #tgline {
+        font-size: 1.1rem;
+    }
+}

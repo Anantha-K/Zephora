@@ -129,6 +129,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    #section1 {
+        background: url(ezgif.com-video-to-gif-converter-2.gif);
+    }
     #name {
         font-size: 3rem;
     }
@@ -141,6 +144,9 @@
 }
 
 @media screen and (max-height: 600px) {
+    #section1 {
+        background: url(ezgif.com-video-to-gif-converter-2.gif);
+    }
     #logo {
         height: 120px;
     }

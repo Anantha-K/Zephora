@@ -13,7 +13,7 @@ function addMessage(content,isUser=false){
         `;
     }else{
         messageDiv.innerHTML=`
-        <img src="./Finn.png">
+        <img src="./Z-removebg-preview.png">
 
         <p>${content}</p>
 
@@ -111,27 +111,28 @@ function removeLoader(loaderElement) {
 }
 
 
-
 async function generateReply(message) {
+    console.log('Function called with message:', message);
+
     try {
         const response = await fetch('https://zephora.onrender.com/chat', {
             method: 'POST',
-            body: JSON.stringify({ message: message }),
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            body: JSON.stringify({ message }),
+            headers: { 'Content-Type': 'application/json' },
         });
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-
+        
+        console.log('Response Status:', response.status);  
         const data = await response.json();
-        console.log("Server response:", data); // Log the response for debugging
-        return data.message;
+        console.log('API Response:', data);  
+
+        if (data && data.response) {
+            return data.response; 
+        } else {
+            console.log('Response structure is unexpected:', data);
+            return "Sorry, I couldn't generate a reply.";
+        }
     } catch (error) {
-        console.error('Error:', error); // Log the error for debugging
+        console.error('Error during request:', error);
         return "Sorry, I couldn't generate a reply due to a technical issue.";
     }
 }
@@ -176,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const typeText = () => {
         return new Promise((resolve) => {
-            const text = "Chat with Finn-AI";
+            const text = "Chat with Zephy";
             const textElement = document.querySelector(".landing p");
             let index = 0;
 

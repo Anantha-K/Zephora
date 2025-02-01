@@ -32,17 +32,42 @@ const teamMembers = {
     },
     "Anlia": {
         name: "Anlia Cliff",
-        role: "DevOps Engineer",
-        description: "Infrastructure wizard and automation expert",
-        specialty: "Cloud Architecture"
+        role: "Creative Mind",
+        description: "A passionate artist with a love for melodies",
+        specialty: "Singing"
+    },
+    "Akshaya": {
+        name: "Akshaya K S",
+        role: "Creative Mind",
+        description: "A dynamic performer who brings energy to every stage",
+        specialty: "Dancing"
+    },
+    "Akash": {
+        name: "Akash",
+        role: "Design Team",
+        description: "An innovative thinker who loves blending creativity with design",
+        specialty: "Singing"
+    },
+    "Ziyan": {
+        name: "Ziyan",
+        role: "Documentation Head",
+        description: "A meticulous organizer with a passion for adventure",
+        specialty: "Bike rider"
+    },
+    "Adhil": {
+        name: "Adhil",
+        role: "Design Team",
+        description: "A fitness enthusiast who finds creativity in strength",
+        specialty: "Body builder"
     },
     "Sreya": {
         name: "Sreya K Ram",
-        role: "DevOps Engineer",
-        description: "Infrastructure wizard and automation expert",
-        specialty: "Cloud Architecture"
+        role: "Captain",
+        description: "A natural leader who inspires with her moves and vision",
+        specialty: "Dancing"
     }
-};
+}
+
 
 async function generateResponse(userInput) {
     try {
